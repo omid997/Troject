@@ -1,0 +1,30 @@
+.group {
+  width: 290px;
+  margin: 0 15px;
+  height: 100%;
+  box-sizing: border-box;
+  display: inline-block;
+  vertical-align: top;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+.group-content {
+  background-color: #dfe3e6;
+  border-radius: 8px;
+  padding: 10px;
+}
+.group-title {
+  font-weight: bold;
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.tasks-list {
+  margin-bottom: 25px;
+  padding: 8px 0;
+  border-bottom: 2px dashed #afafaf;
+}
+.tasks-list-title {
+  font-weight: bold;
+  font-style: italic;
+}

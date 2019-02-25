@@ -1,0 +1,78 @@
+.task {
+  background-color: #fff;
+  border-radius: 8px;
+  height: 48px;
+  position: relative;
+  margin: 10px 0;
+}
+
+.task-info {
+  padding: 5px 42px;
+}
+.task-date {
+  font-size: 12px;
+  color: #949494;
+  padding-top: 4px;
+  display: block;
+}
+.checkButton {
+  border: 2px solid #0079bf;
+  background-color: #fff;
+  display: inline-block;
+  position: absolute;
+  left: 10px;
+  top: 12px;
+  vertical-align: middle;
+  cursor: pointer;
+  height: 24px;
+  width: 24px;
+  font-size: 0;
+}
+.done .checkButton::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 6px;
+  width: 6px;
+  height: 14px;
+  border: solid #0079bf;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+.deleteButton {
+  position: absolute;
+  right: 10px;
+  top: 12px;
+  vertical-align: middle;
+  cursor: pointer;
+  height: 24px;
+  width: 24px;
+  background-color: #fff;
+  border: 2px solid #b04632;
+  color: #b04632;
+  font-size: 22px;
+  margin: 0;
+  font-size: 0;
+}
+.deleteButton::before,
+.deleteButton::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  top: 50%;
+  left: 0;
+  margin-top: -1px;
+  background: #b04632;
+}
+.deleteButton::before {
+  transform: rotate(45deg);
+}
+.deleteButton::after {
+  transform: rotate(-45deg);
+}
+.done .task-date,
+.done .task-title {
+  text-decoration: line-through;
+}
