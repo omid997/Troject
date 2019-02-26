@@ -1,20 +1,3 @@
-const getNow = () => {
-  let currentdate = new Date();
-  let datetime =
-    currentdate.getDate() +
-    "/" +
-    (currentdate.getMonth() + 1) +
-    "/" +
-    currentdate.getFullYear() +
-    " " +
-    currentdate.getHours() +
-    ":" +
-    currentdate.getMinutes() +
-    ":" +
-    currentdate.getSeconds();
-  return datetime;
-};
-
 let init = {
   tasks: [],
   groups: []
@@ -23,7 +6,7 @@ let init = {
 export default function counter(state = init, action) {
   switch (action.type) {
     case "ADD_TASK": {
-      const { id, groupId, title, status } = action;
+      const { id, groupId, title, status, date } = action;
       return {
         ...state,
         tasks: [
@@ -33,7 +16,7 @@ export default function counter(state = init, action) {
             title,
             groupId,
             status,
-            date: getNow()
+            date
           }
         ]
       };

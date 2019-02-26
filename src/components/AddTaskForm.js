@@ -1,6 +1,7 @@
 import React from "react";
 import { addTask } from "../redux/actions";
 import { connect } from "react-redux";
+import { getNow } from "../getNow";
 
 class AddTaskForm extends React.Component {
   constructor(props) {
@@ -23,7 +24,8 @@ class AddTaskForm extends React.Component {
     this.props.addTask({
       title: this.state.input,
       groupId: this.props.groupId,
-      status: false
+      status: false,
+      date: getNow()
     });
     this.setState({
       input: ""
