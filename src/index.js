@@ -14,7 +14,4 @@ const render = () => {
 };
 
 store.subscribe(render);
-store.subscribe(() =>
-  localStorage.setItem("troject-webapp", JSON.stringify(store.getState()))
-);
 render();
